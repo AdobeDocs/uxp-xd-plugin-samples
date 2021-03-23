@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./Clock.css";
+import styles from "./Clock.css";
 
-export const Clock = (props) => {
-    [Now, setNow] = useState(Date.now());
-    const timer = undefined;
+const Clock = (props) => {
+    const [Now, setNow] = useState(Date.now());
+    let timer = undefined;
 
     useEffect(() => {
         timer = setInterval(() => update(), 1000);
@@ -18,6 +18,8 @@ export const Clock = (props) => {
     }
     const theTime = (new Date(Now)).toLocaleTimeString();
     return (
-        <p className="clock">{theTime}</p>
+        <p className={styles.clock}>{theTime}</p>
     );
 }
+
+export default Clock;

@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import './App.css';
+import styles from './App.css';
 
 import Hello from './components/Hello';
 import Clock from './components/Clock';
 import ColorPicker from './components/ColorPicker';
 
+let initialRender = false;
+
 export const App = (props) => {
-    [Color, setColor] = useState({r: 255, g: 0, b: 0, a: 1});
+    const [color, setcolor] = useState({r: 255, g: 0, b: 0, a: 1});
 
     const documentStateChanged = (selection) => {
         if (selection.items.length > 0) {
-            import { Color } from 'scenegraph';
+            const { Color } = require('scenegraph');
             const color = selection.items[0].fill;
             if (color instanceof Color) {
                 setColor({
@@ -25,26 +27,24 @@ export const App = (props) => {
     }
 
     const colorChanged = (color) => {
-        // this.setState({
-        //     color: {
-        //         r: color.r,
-        //         g: color.g,
-        //         b: color.b,
-        //         a: color.a
-        //     },
-        // }, () => {
-        //     const { r, g, b, a } = this.state.color;
-        //     const { editDocument } = require("application");
-        //     const { selection, Color } = require("scenegraph");
-        //     editDocument({editLabel: "Change Colors"}, () => selection.items.forEach(item => item.fill = new Color(`rgba(${r}, ${g}, ${b}, ${a})`)));
-        // }
-        // );
+        setcolor({r: color.r, g: color.g, b: color.b, a: color.a});
     }
 
+    useEffect(() => {
+        const { r, g, b, a} = color;
+        const { editDocument } = require("application");
+        const { selection, Color } = require("scenegraph");
+        if (initialRender) {
+            // editDocument({editLabel: "Change Colors"}, () => selection.items.forEach(item => item.fill = new Color(`rgba(${r}, ${g}, ${b}, ${a})`)));
+        }
+        initialRender = true;
+    }, [color])
+
+
     const { selection } = props;
-    const { r, g, b, a } = Color;
+    const { r, g, b, a } = color;
     return (
-        <panel className="panel">
+        <panel className={styles.panel}>
             <Hello text="Panels!" />
             <Clock />
             <ColorPicker r={r} g={g} b={b} a={a} onChange={colorChanged} />

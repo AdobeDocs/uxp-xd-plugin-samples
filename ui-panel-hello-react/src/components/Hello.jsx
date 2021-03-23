@@ -1,7 +1,9 @@
 import React from 'react';
 
-import "./Hello.css";
+import styles from "./Hello.css";
 
-export const Hello = ({text = "World"} = {}) => (
+const Hello = ({text = "World"} = {}) => (
     <h3 className={styles.hello}>{`Hello, ${text}`.toUpperCase()}</h3>
 );
+
+export default Hello;

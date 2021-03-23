@@ -1,8 +1,9 @@
+import React from 'react';
 import ReactDOM from "react-dom";
 import { selection } from "scenegraph";
 import os from "os";
 
-class PanelController {
+export class PanelController {
     constructor(App) {
         this.App = App;
         this.instance = null;
@@ -37,5 +38,3 @@ class PanelController {
         }
     }
 }
-
-module.exports = PanelController;

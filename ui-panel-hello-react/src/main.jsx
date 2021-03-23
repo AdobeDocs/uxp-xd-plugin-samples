@@ -1,13 +1,12 @@
 // shims, in case they aren't present in the current environment
 require("./util/reactShim");
 
-const App = require("./App");
-const PanelController = require("./controllers/PanelController");
+import React from 'react';
+import { App } from './App'; 
+import {PanelController} from "./controllers/PanelController";
 
 const helloPanel = new PanelController(App);
 
-module.exports = {
-    panels: {
-        hello: helloPanel
-    }
-};
+export const panels = {
+    hello: helloPanel
+}

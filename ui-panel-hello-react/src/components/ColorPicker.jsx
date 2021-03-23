@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ColorPicker.css";
+import styles from "./ColorPicker.css";
 
 const Slider = ({label, value = 0, min = 0, max = 100, step = 1, unit = "", onChange} = {}) => (
     <label className={styles.slider}>
@@ -10,7 +10,7 @@ const Slider = ({label, value = 0, min = 0, max = 100, step = 1, unit = "", onCh
     </label>
 );
 
-export const ColorPicker = (props) => {
+const ColorPicker = (props) => {
     const changeRed = (r) => {
         emitChange("r", r);
     }
@@ -38,9 +38,9 @@ export const ColorPicker = (props) => {
     const { r, g, b, a} = props;
 
     return (
-        <div className="wrapper">
-                <div className="color" style={{backgroundColor: `rgba(${r}, ${g}%, ${b}%, ${a})`}}></div>
-                <div className="picker">
+        <div className={styles.wrapper}>
+                <div className={styles.color} style={{backgroundColor: `rgba(${r}, ${g}%, ${b}%, ${a})`}}></div>
+                <div className={styles.picker}>
                     <Slider label="R" max={255} value={r} onChange={changeRed} />
                     <Slider label="G" max={255} value={g} onChange={changeGreen} />
                     <Slider label="B" max={255} value={b} onChange={changeBlue} />
@@ -49,3 +49,5 @@ export const ColorPicker = (props) => {
             </div>
     )
 }
+
+export default ColorPicker;
