@@ -21,7 +21,7 @@
   "uiEntryPoints": [
     {
       "type": "menu",
-      "label": "UI Hello Vue",
+      "label": "Vue Starter Plugin XD",
       "commandId": "menuCommand"
     }
   ]
