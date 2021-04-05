@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="main.js"></script>    
+</head>
+<style>
+  body {
+    padding: 0 16px;
+  }
+  sp-field-label {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  sp-button {
+    font-size: 12px;
+    height: 32px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
+<body>
+  <form method="dialog">
+    <sp-textfield  id="securekey">
+        <sp-label slot="label">Enter your secure key</sp-label>
+    </sp-textfield>
+    <sp-body id="display">
+    </sp-body>
+    <footer>
+        <sp-button id="fetch">Fetch Key</sp-button>
+        <sp-button type="submit" id="save" uxp-variant="cta">Save Key</sp-button>
+    </footer>
+  </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "manifestVersion": 4,
+  "id": "com.adobe.secure-storage-sample",
+  "name": "secure-storage-sample",
+  "version": "1.0.0",
+  "main": "index.html",
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "secure-storage",
+      "label": { "default": "Run secure-storage sample" }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon@1x.png"
+    },
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@2x.png"
+    }
+  ]
+}
