@@ -1,0 +1,43 @@
+:local(.cardWrapper) {
+    margin: var(--margin);
+    border-radius: 8px;
+    background-color: #EAEAEA;
+    flex: 1 1 auto;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #DDDDDD;
+    position: relative;
+}
+
+:local(.cardHero) {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+:local(.cardHeroImg)  {
+    margin: auto auto;
+    display: block;
+}
+
+:local(.selected) {
+    background-color: #1592E6;
+}
+:local(.selected) :local(.cardHero) {
+    opacity: 0.75;
+}
+
+:local(.unselected) {
+}
+
+:local(.cardHeroInfo) {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.75);
+    right: var(--margin);
+    bottom: var(--margin);
+    display: none;
+}
+
+:local(.cardWrapper):hover :local(.cardHeroInfo) {
+    display: block;
+}

@@ -1,0 +1,35 @@
+{
+    "manifestVersion": 4,
+    "id": "ITEM_REPEATER",
+    "name": "(SG) Linear/Rotate Repeat sample plugin",
+    "version": "1.0.0",
+    "main": "main.js",
+    "host": {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    },
+    "entrypoints": [
+      {
+        "type": "command",
+        "id": "simpleRepeat",
+        "label": { "default": "SG - Repeat Item" }
+      },
+      {
+        "type": "command",
+        "id": "rotateRepeat",
+        "label": { "default": "SG - Rotate-Repeat Item" }
+      }
+    ],
+    "icons": [
+      {
+        "width": 24,
+        "height": 24,
+        "path": "images/icon@1x.png"
+      },
+      {
+        "width": 48,
+        "height": 48,
+        "path": "images/icon@2x.png"
+      }
+    ]
+}

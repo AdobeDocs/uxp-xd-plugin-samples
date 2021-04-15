@@ -1,0 +1,30 @@
+{
+  "manifestVersion": 4,
+  "id": "HOW_TO_EXPORT_A_RENDITION",
+  "name": "(H2) How to export a rendition",
+  "version": "1.0.0",
+  "main": "main.js",
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "entrypoints": [
+    {
+      "type": "command",
+      "id": "exportRendition",
+      "label": { "default": "(H2) How to export a rendition" }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon@1x.png"
+    },
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@2x.png"
+    }
+  ]
+}
