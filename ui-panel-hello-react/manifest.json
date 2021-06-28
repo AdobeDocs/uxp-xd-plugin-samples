@@ -22,7 +22,7 @@
     "uiEntryPoints": [
         {
             "type": "panel",
-            "label": "Hello Panel",
+            "label": "(UI) UI Panel Hello React",
             "panelId": "hello"
         }
     ]
