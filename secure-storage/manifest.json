@@ -12,7 +12,7 @@
     {
       "type": "panel",
       "id": "secure-storage",
-      "label": { "default": "Run secure-storage sample" }
+      "label": { "default": "secure-storage-sample" }
     }
   ],
   "icons": [
