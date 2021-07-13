@@ -1,9 +1,9 @@
 {
+  "manifestVersion": 4,
   "id": "UI_PANEL_HELLO_REACT",
   "name": "(UI) UI Panel Hello React",
   "version": "2.0.0",
   "main": "main.js",
-  "manifestVersion": 4,
   "host": {
     "app": "XD",
     "minVersion": "36.0.0"
