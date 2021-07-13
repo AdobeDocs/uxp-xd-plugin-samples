@@ -1,29 +1,29 @@
 {
-    "id": "UI_PANEL_HELLO_REACT",
-    "author": "Kerri Shotts",
-    "name": "(UI) UI Panel Hello React",
-    "version": "2.0.0",
-    "host": {
-        "app": "XD",
-        "minVersion": "21.0"
-    },
-    "icons": [
-        {
-            "width": 24,
-            "height": 24,
-            "path": "images/icon@1x.png"
-        },
-        {
-            "width": 48,
-            "height": 48,
-            "path": "images/icon@2x.png"
-        }
-    ],
-    "uiEntryPoints": [
-        {
-            "type": "panel",
-            "label": "Hello Panel",
-            "panelId": "hello"
-        }
-    ]
+  "id": "UI_PANEL_HELLO_REACT",
+  "name": "(UI) UI Panel Hello React",
+  "version": "2.0.0",
+  "main": "main.js",
+  "manifestVersion": 4,
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "hello",
+      "label": {
+        "default": "Hello Panel"
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon.png",
+      "scale": [1, 2],
+      "species": ["pluginList"]
+    }
+  ]
 }
