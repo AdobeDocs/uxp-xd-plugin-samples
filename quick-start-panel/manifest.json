@@ -1,0 +1,29 @@
+{
+  "manifestVersion": 4,
+  "id": "QUICK_START_PANEL",
+  "name": "Hello World sample plugin for panel",
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "main": "main.js",
+  "version": "1.0.0",
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon.png",
+      "scale": [1, 2],
+      "species": ["pluginList"]
+    }
+  ],
+  "entryPoints": [
+    {
+      "type": "panel",
+      "id": "enlargeRectangle",
+      "label": {
+        "default": "Enlarge a Rectangle"
+      }
+    }
+  ]
+}
