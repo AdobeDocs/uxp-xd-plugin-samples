@@ -8,7 +8,7 @@
     "app": "XD",
     "minVersion": "36.0.0"
   },
-  "entrypoints": [
+  "entryPoints": [
     {
       "type": "panel",
       "id": "hello",
