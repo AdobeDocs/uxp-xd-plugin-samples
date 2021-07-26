@@ -1,0 +1,36 @@
+{
+  "id": "com.adobe.uxp.xd.starter.svelte",
+  "name": "UXP Svelte Starter Plugin",
+  "version": "1.0.0",
+  "main": "index.html",
+  "manifestVersion": 4,
+  "host": [
+    {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    }
+  ],
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "svelte",
+      "label": {
+        "default": "Svelte Starter"
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 48,
+      "height": 48,
+      "path": "icons/plugin.png",
+      "scale": [
+        1,
+        2
+      ],
+      "species": [
+        "pluginList"
+      ]
+    }
+  ]
+}
