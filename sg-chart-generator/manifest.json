@@ -1,0 +1,35 @@
+{
+    "manifestVersion": 4,
+    "id": "CHART_GENERATOR",
+    "name": "(SG) Chart Generator sample plugin",
+    "version": "1.0.0",
+    "main": "main.js",
+    "host": {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    },
+    "entrypoints": [
+      {
+        "type": "command",
+        "id": "barChart",
+        "label": { "default": "SG Create Bar Chart" }
+      },
+      {
+        "type": "command",
+        "id": "pieChart",
+        "label": { "default": "SG Create Pie Chart" }
+      }
+    ],
+    "icons": [
+      {
+        "width": 24,
+        "height": 24,
+        "path": "images/icon@1x.png"
+      },
+      {
+        "width": 48,
+        "height": 48,
+        "path": "images/icon@2x.png"
+      }
+    ]
+}

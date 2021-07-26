@@ -1,0 +1,18 @@
+{
+    "manifestVersion": 4,
+    "id": "CREATE_BUTTON_FRAME",
+    "name": "Sample Plugin: Create Button Frame",
+    "version": "1.0.0",
+    "main": "main.js",
+    "host": {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    },
+    "entrypoints": [
+      {
+        "type": "panel",
+        "id": "buttonFrame",
+        "label": { "default": "Sample Plugin: Create Button Frame" }
+      }
+    ]
+}

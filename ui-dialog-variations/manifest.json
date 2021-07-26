@@ -1,0 +1,59 @@
+{
+    "id": "DIALOG_VARIATIONS",
+    "name": "(UI) Dialog Variations",
+    "icons": [
+        {
+            "width": 24,
+            "height": 24,
+            "path": "images/icon@1x.png"
+        },
+        {
+            "width": 48,
+            "height": 48,
+            "path": "images/icon@2x.png"
+        }
+    ],
+    "host": {
+        "app": "XD",
+        "minVersion": "13.0"
+    },
+    "version": "1.0.0",
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "Dialog Variations",
+            "menuItems": [
+                {
+                    "type": "menu",
+                    "label": "Simple Alert",
+                    "commandId": "showAlert"
+                },
+                {
+                    "type": "menu",
+                    "label": "Error Alert",
+                    "commandId": "showError"
+                },
+                {
+                    "type": "menu",
+                    "label": "Warning",
+                    "commandId": "showWarning"
+                },
+                {
+                    "type": "menu",
+                    "label": "Confirmation",
+                    "commandId": "showConfirm"
+                },
+                {
+                    "type": "menu",
+                    "label": "Prompt",
+                    "commandId": "showPrompt"
+                },
+                {
+                    "type": "menu",
+                    "label": "About",
+                    "commandId": "showAbout"
+                }
+            ]
+        }
+    ]
+}

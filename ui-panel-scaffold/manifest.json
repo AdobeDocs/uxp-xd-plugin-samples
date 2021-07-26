@@ -1,0 +1,30 @@
+{
+  "manifestVersion": 4,
+  "id": "YOUR_ID_HERE",
+  "name": "Sample Plugin: Panel Scaffold",
+  "version": "1.0.0",
+  "main": "main.js",
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "panel",
+      "label": { "default": "Sample Plugin: Panel Scaffold" }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon@1x.png"
+    },
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@2x.png"
+    }
+  ]
+}

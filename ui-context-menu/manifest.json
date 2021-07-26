@@ -1,0 +1,39 @@
+{
+    "id": "UI_CONTEXT_MENU",
+    "name": "(UI) Context Menu",
+    "version": "1.0.0",
+    "host": {
+        "app": "XD",
+        "minVersion": "13.0"
+    },
+    "icons": [
+        {
+            "width": 24,
+            "height": 24,
+            "path": "images/icon@1x.png"
+        },
+        {
+            "width": 48,
+            "height": 48,
+            "path": "images/icon@2x.png"
+        }
+    ],
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "UI Context Menu",
+            "menuItems": [
+                {
+                    "type": "menu",
+                    "label": "UI Submenu 1",
+                    "commandId": "menuCommand"
+                },
+                {
+                    "type": "menu",
+                    "label": "UI Submenu 2",
+                    "commandId": "anotherMenuCommand"
+                }
+            ]
+        }
+    ]
+}

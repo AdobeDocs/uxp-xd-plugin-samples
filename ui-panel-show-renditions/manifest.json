@@ -1,0 +1,18 @@
+{
+    "manifestVersion": 4,
+    "id": "PANEL_RENDITION",
+    "name": "Panel Rendition Example",
+    "version": "1.0.0",
+    "main": "main.js",
+    "host": {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    },
+    "entrypoints": [
+      {
+        "type": "panel",
+        "id": "example",
+        "label": { "default": "Panel Rendition Example" }
+      }
+    ]
+}

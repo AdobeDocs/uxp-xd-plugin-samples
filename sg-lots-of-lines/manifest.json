@@ -1,0 +1,39 @@
+{
+    "id": "LOTS_OF_LINES",
+    "name": "(SG) Lots of Lines",
+    "host": {
+        "app": "XD",
+        "minVersion": "13.0"
+    },
+    "version": "1.0.0",
+    "icons": [
+        {
+            "width": 24,
+            "height": 24,
+            "path": "images/icon@1x.png"
+        },
+        {
+            "width": 48,
+            "height": 48,
+            "path": "images/icon@2x.png"
+        }
+    ],
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "SG - Draw lots of lines",
+            "menuItems": [
+                {
+                    "type": "menu",
+                    "label": "Crossed Lines",
+                    "commandId": "crossedLines"
+                },
+                {
+                    "type": "menu",
+                    "label": "Hypnotic Lines",
+                    "commandId": "hypnoticLines"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "MARGIN_GUIDE",
+    "name": "(SG) Margin Guides",
+    "host": {
+        "app": "XD",
+        "minVersion": "13.0"
+    },
+    "version": "1.0.0",
+    "icons": [
+        {
+            "width": 24,
+            "height": 24,
+            "path": "images/icon@1x.png"
+        },
+        {
+            "width": 48,
+            "height": 48,
+            "path": "images/icon@2x.png"
+        }
+    ],
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "SG - Margin Guide",
+            "menuItems": [
+                {
+                    "type": "menu",
+                    "label": "SG - Create Margin Guide",
+                    "commandId": "createMarginGuide"
+                },
+                {
+                    "type": "menu",
+                    "label": "SG - Remove Margin Guide",
+                    "commandId": "removeMarginGuide"
+                }
+            ]
+        }
+    ]
+}

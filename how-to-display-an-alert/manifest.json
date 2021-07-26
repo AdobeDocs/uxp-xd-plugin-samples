@@ -1,0 +1,35 @@
+{
+  "manifestVersion": 4,
+  "id": "HOW_TO_SHOW_AN_ALERT",
+  "name": "(H2) How to show an alert",
+  "version": "1.0.0",
+  "main": "main.js",
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "entrypoints": [
+    {
+      "type": "command",
+      "id": "showAlert",
+      "label": { "default": "How to show an alert" }
+    },
+    {
+      "type": "command",
+      "id": "showError",
+      "label": { "default": "How to show an error" }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon@1x.png"
+    },
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@2x.png"
+    }
+  ]
+}
