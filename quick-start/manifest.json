@@ -15,7 +15,7 @@
         {
             "type": "command",
             "id": "createRectangle",
-            "label": "Create Rectangle"
+            "label": "Hello World sample plugin"
         }
     ]
 }
