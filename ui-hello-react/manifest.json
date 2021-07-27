@@ -1,28 +1,34 @@
 {
-    "id": "UI_HELLO_REACT",
-    "name": "(UI) Hello React JSX",
-    "version": "1.0.0",
-    "host": {
-        "app": "XD",
-        "minVersion": "18.0"
-    },
-    "icons": [
-        {
-            "width": 24,
-            "height": 24,
-            "path": "images/icon@1x.png"
-        },
-        {
-            "width": 48,
-            "height": 48,
-            "path": "images/icon@2x.png"
-        }
-    ],
-    "uiEntryPoints": [
-        {
-            "type": "menu",
-            "label": "UI Hello React JSX",
-            "commandId": "menuCommand"
-        }
-    ]
+  "manifestVersion": 4,
+  "id": "UI_HELLO_REACT",
+  "name": "(UI) UI Hello React",
+  "version": "2.0.0",
+  "main": "main.js",
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "entryPoints": [
+    {
+      "type": "panel",
+      "id": "hello",
+      "label": {
+        "default": "Hello Panel"
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon.png",
+      "scale": [
+        1,
+        2
+      ],
+      "species": [
+        "pluginList"
+      ]
+    }
+  ]
 }

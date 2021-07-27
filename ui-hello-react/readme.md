@@ -1,11 +1,10 @@
+# ui-panel-hello-react
 
-to build
+Simple Hello world that demonstrates React and Adobe XD Panels
 
-install yarn (if needed) with
-    npm install -g yarn
+## Usage
 
-install dependencies with
-    yarn install
-
-watch and automaticaly rebuild with
-    yarn watch
+```bash
+npm install
+npm run watch
+```
