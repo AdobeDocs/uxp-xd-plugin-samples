@@ -1,15 +1,17 @@
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
-    entry: "./src/main.jsx",
+    entry: ["@babel/polyfill", "./src/index.jsx"],
     output: {
-        path: __dirname,
-        filename: 'main.js',
-        libraryTarget: "commonjs2"
+        path: path.join(__dirname, 'dist'),
+        filename: 'index.js',
     },
-    devtool: "none", // prevent webpack from using eval() on my module
+    devtool: false, // Disallow the use of eval for XD plugins 
     externals: {
-        application: 'application',
-        uxp: 'uxp',
-        scenegraph: 'scenegraph'
+        uxp: 'commonjs2 uxp',
+        application: 'commonjs2 application',
+        scenegraph: 'commonjs2 scenegraph'
     },
     resolve: {
         extensions: [".js", ".jsx"]
@@ -21,9 +23,9 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 options: {
-                    plugins: [
-                        "transform-react-jsx",
-                        "transform-object-rest-spread",
+                    presets: [
+                        "@babel/env",
+                        "@babel/react"
                     ]
                 }
             },
@@ -34,8 +36,23 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                use: [ 
+                    { 
+                        loader: "style-loader" 
+                    }, 
+                    { 
+                        loader: "css-loader", 
+                        options: {
+                            modules: true,
+                        }
+                    }
+                ],
             }
         ]
-    }
+    },
+    plugins: [
+        new CopyPlugin({
+            patterns: ['plugin']
+        })
+    ]
 };

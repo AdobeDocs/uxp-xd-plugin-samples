@@ -1,5 +1,5 @@
 {
-    "name": "e2e-adobe-stock",
+    "name": "com.adobe.uxp.xd.ui.hello.react",
     "version": "1.0.0",
     "main": "main.js",
     "scripts": {
@@ -9,19 +9,21 @@
     "license": "none",
     "private": true,
     "devDependencies": {
-        "css-loader": "^1.0.0",
-        "file-loader": "^1.1.11",
-        "nodemon": "^1.18.7",
-        "style-loader": "^0.22.1",
-        "webpack": "^4.16.4",
-        "webpack-cli": "^3.1.0"
+        "@babel/core": "^7.14.8",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.14.8",
+        "@babel/preset-react": "^7.14.5",
+        "babel-loader": "^8.2.2",
+        "copy-webpack-plugin": "^9.0.1",
+        "css-loader": "^6.2.0",
+        "file-loader": "^6.2.0",
+        "nodemon": "^2.0.12",
+        "style-loader": "^3.2.1",
+        "webpack": "^5.47.0",
+        "webpack-cli": "^4.7.2"
     },
     "dependencies": {
-        "babel-core": "^6.26.3",
-        "babel-loader": "^7.1.5",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-plugin-transform-react-jsx": "^6.24.1",
-        "react": "^16.8.4",
-        "react-dom": "^16.8.4"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     }
 }

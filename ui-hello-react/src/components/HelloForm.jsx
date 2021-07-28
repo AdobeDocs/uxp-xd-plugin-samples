@@ -1,7 +1,5 @@
-import reactShim from "../util/reactShim";
 import styles from "./HelloForm.css";
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 
 const HelloForm = (props) => {
     const [Name, setName] = useState(props.name || "");
@@ -17,14 +15,14 @@ const HelloForm = (props) => {
     return (
         <form style={{ width: 300 }}>
             <h1>React with JSX Components</h1>
-                <label> 
-                    <span>What is your name?</span>
-                    <input onChange={onInputChange} />
-                </label>
-                <p className={styles.text}>{"Hello " + Name}</p>
-                <footer>
-                    <button type="submit" uxp-variant="cta" onClick={onDoneClick}>Done</button>
-                </footer>
+            <label> 
+                <span>What is your name?</span>
+                <input onChange={onInputChange} />
+            </label>
+            <p className={styles.text}>{"Hello " + Name}</p>
+            <footer>
+                <button type="submit" uxp-variant="cta" onClick={onDoneClick}>Done</button>
+            </footer>
         </form>   
     )
 }
