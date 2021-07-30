@@ -1,0 +1,49 @@
+{
+    "id": "UI_HTML_PLAYGROUND",
+    "name": "(UI) HTML Playground",
+    "version": "1.0.0",
+    "host": {
+        "app": "XD",
+        "minVersion": "21.0"
+    },
+    "icons": [
+        {
+            "width": 24,
+            "height": 24,
+            "path": "images/icon@1x.png"
+        },
+        {
+            "width": 48,
+            "height": 48,
+            "path": "images/icon@2x.png"
+        }
+    ],
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "UI HTML Playground",
+            "menuItems": [
+                {
+                    "type": "menu",
+                    "label": "Edit...",
+                    "commandId": "editPlayground"
+                },
+                {
+                    "type": "menu",
+                    "label": "Run...",
+                    "commandId": "runPlayground"
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "label": "Edit in Panel",
+            "panelId": "editUxpPen"
+        },
+        {
+            "type": "panel",
+            "label": "Run as Panel",
+            "panelId": "runPanel"
+        }
+    ]
+}

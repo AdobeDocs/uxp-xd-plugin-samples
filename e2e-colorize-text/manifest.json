@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 4,
+    "id": "COLORIZE_TEXT",
+    "author": "Kerri Shotts",
+    "name": "(E2E) Colorize Text",
+    "version": "1.0.0",
+    "main": "main.js",
+    "host": {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    },
+    "entrypoints": [
+      {
+        "type": "command",
+        "id": "gradientize",
+        "label": { "default": "Gradient" }
+      },
+      {
+        "type": "command",
+        "id": "repeatize",
+        "label": { "default": "Repeat" }
+      },
+      {
+        "type": "command",
+        "id": "randomize",
+        "label": { "default": "Randomize" }
+      },
+      {
+        "type": "command",
+        "id": "aboutPlugin",
+        "label": { "default": "About" }
+      }
+    ],
+    "icons": [
+      {
+        "width": 24,
+        "height": 24,
+        "path": "images/icon@1x.png"
+      },
+      {
+        "width": 48,
+        "height": 48,
+        "path": "images/icon@2x.png"
+      }
+    ]
+  }

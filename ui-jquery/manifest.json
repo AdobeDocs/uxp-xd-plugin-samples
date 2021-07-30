@@ -1,0 +1,30 @@
+{
+    "manifestVersion": 4,
+    "id": "UI_JQUERY",
+    "name": "(UI) Hello H Plugin",
+    "version": "1.0.0",
+    "main": "main.js",
+    "host": {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    },
+    "entrypoints": [
+      {
+        "type": "command",
+        "id": "menuCommand",
+        "label": { "default": "(UI) Hello H Plugin" }
+      }
+    ],
+    "icons": [
+      {
+        "width": 24,
+        "height": 24,
+        "path": "images/icon@1x.png"
+      },
+      {
+        "width": 48,
+        "height": 48,
+        "path": "images/icon@2x.png"
+      }
+    ]
+}

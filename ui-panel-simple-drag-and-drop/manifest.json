@@ -1,0 +1,18 @@
+{
+    "manifestVersion": 4,
+    "id": "DRAGDROP",
+    "name": "Sample Plugin: Drag and Drop Example",
+    "version": "1.0.0",
+    "main": "main.js",
+    "host": {
+      "app": "XD",
+      "minVersion": "36.0.0"
+    },
+    "entrypoints": [
+      {
+        "type": "panel",
+        "id": "dnd",
+        "label": { "default": "Sample Plugin: Drag and Drop Example" }
+      }
+    ]
+}

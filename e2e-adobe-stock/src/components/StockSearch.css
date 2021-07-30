@@ -1,0 +1,45 @@
+:local(.form) {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    height: 100%;
+}
+
+:local(.resultsWrapper) {
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+:local(.resultsInfo) {
+    margin: 0;
+    justify-content: flex-end;
+}
+
+:local(.commandLine) {
+    border-top: 0.5px solid #D8D8D8;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    order: 99;
+    padding-top: 24px;
+}
+
+:local(.commandLine) div, :local(.commandLine) p {
+    flex: 1 1 auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:local(.commandLine) button {
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}

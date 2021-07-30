@@ -1,0 +1,28 @@
+{
+    "id": "UI_PADDING_HYPERSCRIPT",
+    "name": "(UI) Button Padding",
+    "version": "1.0.0",
+    "host": {
+        "app": "XD",
+        "minVersion": "13.0"
+    },
+    "icons": [
+        {
+            "width": 24,
+            "height": 24,
+            "path": "images/icon@1x.png"
+        },
+        {
+            "width": 48,
+            "height": 48,
+            "path": "images/icon@2x.png"
+        }
+    ],
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "UI Button Padding Hyperscript",
+            "commandId": "menuCommand"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "id": "DATAGRID_REACT",
+    "name": "(UI) React Data Grid",
+    "version": "1.0.0",
+    "host": {
+        "app": "XD",
+        "minVersion": "18.0"
+    },
+    "icons": [
+        {
+            "width": 24,
+            "height": 24,
+            "path": "images/icon@1x.png"
+        },
+        {
+            "width": 48,
+            "height": 48,
+            "path": "images/icon@2x.png"
+        }
+    ],
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "UI Datagrid React",
+            "commandId": "menuCommand"
+        }
+    ]
+}
