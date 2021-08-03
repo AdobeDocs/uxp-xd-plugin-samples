@@ -1,30 +1,40 @@
-import styles from "./HelloForm.css";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import './HelloForm.css';
 
-const HelloForm = (props) => {
-    const [Name, setName] = useState(props.name || "");
+import WC from './WC';
+import Clock from './Clock';
 
-    const onInputChange = (e) => {
-        setName(e.target.value);
-    }
+const HelloForm = ({ dialog }) => {
+  const [name, setName] = useState('');
 
-    const onDoneClick = (e) => {
-        props.dialog.close();
-    }
+  const onInputChange = (e) => {
+    setName(e.target.value);
+  };
 
-    return (
-        <form style={{ width: 300 }}>
-            <h1>React with JSX Components</h1>
-            <label> 
-                <span>What is your name?</span>
-                <input onChange={onInputChange} />
-            </label>
-            <p className={styles.text}>{"Hello " + Name}</p>
-            <footer>
-                <button type="submit" uxp-variant="cta" onClick={onDoneClick}>Done</button>
-            </footer>
-        </form>   
-    )
-}
+  const onDoneClick = (e) => {
+    dialog.close();
+  };
+
+  return (
+    <WC onInput={onInputChange}>
+      <div className="cell" style={{ width: 300 }}>
+        <sp-heading>Example Command</sp-heading>
+        <sp-textfield>
+          <sp-label slot="label">What is your name?</sp-label>
+        </sp-textfield>
+        <div className="cell">
+          <sp-body>{'Hello ' + name}</sp-body>
+        </div>
+        <div className="cell">
+          <sp-heading>Current Time</sp-heading>
+          <Clock />
+        </div>
+        <sp-button variant="cta" onClick={onDoneClick}>
+          Done
+        </sp-button>
+      </div>
+    </WC>
+  );
+};
 
 export default HelloForm;

@@ -1,53 +1,98 @@
-import React from 'react';
-import styles from "./ColorPicker.css";
+import React, { useEffect, useRef, useState } from 'react';
+import { editDocument } from 'application';
+import { Color, selection } from 'scenegraph';
+import './ColorPicker.css';
 
-const Slider = ({label, value = 0, min = 0, max = 100, step = 1, unit = "", onChange} = {}) => (
-    <label className={styles.slider}>
-        <span>{label}</span>
-        <input id={`range${label}`} type="range" step={(max-min) / 32} min={min} max={max} value={value} onChange={e => onChange && onChange(e.target.value)} />
-        <input id={`input${label}`} type="number" uxp-quiet="true" value={value} min={min} max={max} step={step} onChange={e => onChange && onChange(e.target.value)} />
-        { unit && <span>{unit}</span> }
-    </label>
-);
+import Slider from './Slider';
 
-const ColorPicker = (props) => {
-    const changeRed = (r) => {
-        emitChange("r", r);
+const ColorPicker = () => {
+  const _sldRed = useRef(null);
+  const _sldGreen = useRef(null);
+  const _sldBlue = useRef(null);
+  const _sldAlpha = useRef(null);
+  const _textRed = useRef(null);
+  const _textGreen = useRef(null);
+  const _textBlue = useRef(null);
+  const _textAlpha = useRef(null);
+
+  const [red, setRed] = useState(255);
+  const [green, setGreen] = useState(0);
+  const [blue, setBlue] = useState(0);
+  const [alpha, setAlpha] = useState(1);
+
+  const [render, setRender] = useState(false);
+
+  useEffect(() => {
+    if (render) {
+      updateDocumentColor();
+    } else {
+      setRender(true);
     }
+  }, [red, green, blue, alpha]);
 
-    const changeGreen = (g) => {
-        emitChange("g", g);
-    }
+  const updateDocumentColor = () => {
+    editDocument({ editLabel: 'Change Colors' }, () =>
+      selection.items.forEach(
+        (item) =>
+          (item.fill = new Color(`rgba(${red}, ${green}, ${blue}, ${alpha})`))
+      )
+    );
+  };
 
-    const changeBlue = (b) => {
-        emitChange("b", b);
-    }
-
-    const changeAlpha = (a) => {
-        emitChange("a", a);
-    }
-
-    const emitChange = (component, value) => {
-        const { onChange } = props;
-        const {r, g, b, a} = props;
-        if (onChange) {
-            onChange(Object.assign({}, {r, g, b, a}, {[component]: value}));
-        }
-    }
-
-    const { r, g, b, a} = props;
-
-    return (
-        <div className={styles.wrapper}>
-                <div className={styles.color} style={{backgroundColor: `rgba(${r}, ${g}%, ${b}%, ${a})`}}></div>
-                <div className={styles.picker}>
-                    <Slider label="R" max={255} value={r} onChange={changeRed} />
-                    <Slider label="G" max={255} value={g} onChange={changeGreen} />
-                    <Slider label="B" max={255} value={b} onChange={changeBlue} />
-                    <Slider label="A" max={1} step={0.01} value={a} onChange={changeAlpha} />
-                </div>
-            </div>
-    )
-}
+  return (
+    <div>
+      <div
+        className="color"
+        style={{
+          backgroundColor: `rgba(${red}, ${green}%, ${blue}%, ${alpha})`,
+        }}
+      ></div>
+      <div>
+        <Slider
+          sliderRef={_sldRed}
+          textRef={_textRed}
+          label="R"
+          max={255}
+          value={red}
+          unit="red"
+          onChange={(e) => {
+            setRed(Number(e.target.value));
+          }}
+        />
+        <Slider
+          sliderRef={_sldGreen}
+          textRef={_textGreen}
+          label="G"
+          max={255}
+          value={green}
+          onChange={(e) => {
+            setGreen(Number(e.target.value));
+          }}
+        />
+        <Slider
+          sliderRef={_sldBlue}
+          textRef={_textBlue}
+          label="B"
+          max={255}
+          value={blue}
+          onChange={(e) => {
+            setBlue(Number(e.target.value));
+          }}
+        />
+        <Slider
+          sliderRef={_sldAlpha}
+          textRef={_textAlpha}
+          label="A"
+          max={1}
+          step={0.01}
+          value={alpha}
+          onChange={(e) => {
+            setAlpha(Number(e.target.value));
+          }}
+        />
+      </div>
+    </div>
+  );
+};
 
 export default ColorPicker;

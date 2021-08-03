@@ -1,9 +1,8 @@
 {
     "name": "com.adobe.uxp.xd.ui.hello.react",
     "version": "1.0.0",
-    "main": "main.js",
     "scripts": {
-        "watch": "nodemon -w src -e js,jsx,json,css -w webpack.config.js -x yarn build",
+        "watch": "webpack -w --mode development",
         "build": "webpack --mode development"
     },
     "license": "none",
@@ -17,7 +16,6 @@
         "copy-webpack-plugin": "^9.0.1",
         "css-loader": "^6.2.0",
         "file-loader": "^6.2.0",
-        "nodemon": "^2.0.12",
         "style-loader": "^3.2.1",
         "webpack": "^5.47.0",
         "webpack-cli": "^4.7.2"
