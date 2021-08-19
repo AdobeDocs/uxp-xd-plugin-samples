@@ -1,0 +1,10 @@
+sp-button {
+  position: absolute;
+  margin-right: 24px;
+  right: 0%;
+  bottom: 10%;
+}
+
+.cell {
+  margin: 4px 2px;
+}

@@ -1,0 +1,8 @@
+.color {
+  flex: 0 0 64px;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 64px;
+  height: 64px;
+  margin-right: 8px;
+}

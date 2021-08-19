@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 4,
+  "id": "com.adobe.uxp.xd.ui.hello.react",
+  "name": "UXP UI Hello React",
+  "version": "2.0.0",
+  "main": "index.html",
+  "host": {
+    "app": "XD",
+    "minVersion": "36.0.0"
+  },
+  "entryPoints": [
+    {
+      "type": "command",
+      "id": "formCommand",
+      "label": {
+        "default": "Example Command"
+      }
+    },
+    {
+      "type": "panel",
+      "id": "hello",
+      "label": {
+        "default": "Example Panel"
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "icons/icon.png",
+      "scale": [
+        1,
+        2
+      ],
+      "species": [
+        "pluginList"
+      ]
+    }
+  ]
+}

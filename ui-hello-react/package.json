@@ -1,25 +1,27 @@
 {
-  "name": "hello_react_jsx",
-  "version": "1.0.0",
-  "main": "main.js",
-  "scripts": {
-    "watch": "nodemon -w src -e js,jsx,css -w webpack.config.js -x yarn build",
-    "build": "webpack --mode development"
-  },
-  "license": "none",
-  "private": true,
-  "devDependencies": {
-    "nodemon": "^1.18.7",
-    "webpack": "^4.16.4",
-    "webpack-cli": "^3.1.0"
-  },
-  "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "css-loader": "^1.0.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "style-loader": "^0.22.0"
-  }
+    "name": "com.adobe.uxp.xd.ui.hello.react",
+    "version": "1.0.0",
+    "scripts": {
+        "watch": "webpack -w --mode development",
+        "build": "webpack --mode development"
+    },
+    "license": "none",
+    "private": true,
+    "devDependencies": {
+        "@babel/core": "^7.14.8",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.14.8",
+        "@babel/preset-react": "^7.14.5",
+        "babel-loader": "^8.2.2",
+        "copy-webpack-plugin": "^9.0.1",
+        "css-loader": "^6.2.0",
+        "file-loader": "^6.2.0",
+        "style-loader": "^3.2.1",
+        "webpack": "^5.47.0",
+        "webpack-cli": "^4.7.2"
+    },
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
 }

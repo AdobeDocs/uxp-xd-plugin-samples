@@ -1,27 +1,45 @@
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
-    entry: "./src/main.jsx",
-    output: {
-        path: __dirname,
-        filename: 'main.js',
-        libraryTarget: "commonjs2"
-    },
-    devtool: "none", // prevent webpack from using eval() on my module
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: "babel-loader",
-                options: {
-                    plugins: [
-                        "transform-react-jsx"
-                    ]
-                }
-            },
-            {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
-            }
-        ]
-    }
+  entry: ['@babel/polyfill', './src/index.jsx'],
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js',
+  },
+  devtool: false, // Disallow the use of eval for XD plugins
+  externals: {
+    uxp: 'commonjs2 uxp',
+    application: 'commonjs2 application',
+    scenegraph: 'commonjs2 scenegraph',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/env', '@babel/react'],
+        },
+      },
+      {
+        test: /\.png$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: ['plugin'],
+    }),
+  ],
 };
