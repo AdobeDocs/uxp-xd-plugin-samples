@@ -86,6 +86,8 @@ Since it's an embedded server, its worth noting that this only runs on `localhos
 
 Other than connecting with one another, the two components can also pass strings of text which get reflected in their `Received data from the helper` and `Received data from UXP` sections.
 
+**Note:** Due to an unexpected bug on Windows machines, disconnecting from the helper application will result in an unexpected socket to close and the socket will only repoen if the UXP plugin is reloaded.
+
 ## Note On socket.io
 
 Currently, this sample uses `127.0.0.1` to connect to the socket server in order to work on all platforms.
