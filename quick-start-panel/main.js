@@ -1,4 +1,6 @@
-const { selection } = require("scenegraph")
+const { selection } = require("scenegraph");
+const { entrypoints } = require("uxp");
+
 let panel;
 
 function create() {
@@ -74,12 +76,11 @@ function update() {
     }
 }
 
-
-module.exports = {
-    panels: {
-        enlargeRectangle: {
-            show,
-            update
-        }
+entrypoints.setup({
+  panels: {
+    enlargeRectangle: {
+      show,
+      update
     }
-};
+  }
+});
